@@ -16,14 +16,13 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
-
-    text = "📚 *Help Menu*\n\nPili ng category para makita ang mga available na commands 👇"
     await update.callback_query.edit_message_text(
-        text=text, reply_markup=reply_markup, parse_mode="Markdown"
+        text="📚 *Help Menu*\n\nPili ng category para makita ang mga available na commands 👇",
+        reply_markup=reply_markup, parse_mode="Markdown"
     )
 
 
-# --- Fun Category ---
+# --- Fun Commands ---
 async def help_fun(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [
@@ -43,8 +42,7 @@ async def help_fun(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=reply_markup, parse_mode="Markdown"
     )
 
-
-# --- Utilities Category ---
+# --- Utilities Commands ---
 async def help_utils(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [
@@ -64,8 +62,7 @@ async def help_utils(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=reply_markup, parse_mode="Markdown"
     )
 
-
-# --- Admin Tools Category ---
+# --- Admin Commands ---
 async def help_admin(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [
